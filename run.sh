@@ -60,6 +60,7 @@ touch /mongo_backup.log
 tail -F /mongo_backup.log &
 
 if [ -n "${INIT_BACKUP}" ]; then
+    sleep 10
     echo "=> Create a backup on the startup"
     /backup.sh
 fi
